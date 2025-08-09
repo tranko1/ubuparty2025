@@ -38,12 +38,12 @@ sudo apt update && sudo apt upgrade -y
 Por defecto, WSL2 utiliza una red virtual (NAT) que aisla la máquina Linux de la red local. Para que los servicios corriendo en WSL2 (y en Docker dentro de él) sean directamente accesibles desde otros dispositivos en tu red local (LAN), puedes configurar el modo de red en `mirrored`.
 
 1.  **Crear el fichero `.wslconfig`**:
-    Abre una terminal de comandos o el Explorador de Archivos y navega a tu perfil de usuario. Puedes escribir `%USERPROFILE%` en la barra de direcciones del explorador o utilizar el comando `cd %USERPROFILE%` para navegar hasta tu carpeta de usuario.
+Abre una terminal de comandos o el Explorador de Archivos y navega a tu perfil de usuario. Puedes escribir `%USERPROFILE%` en la barra de direcciones del explorador o utilizar el comando `cd %USERPROFILE%` para navegar hasta tu carpeta de usuario.
     
     Crea un fichero llamado `.wslconfig` en esa ubicación (`C:\Users\<TuUsuario>\.wslconfig`).
 
 2.  **Añadir la configuración de red**:
-    Abre el fichero `.wslconfig` con un editor de texto y añade el siguiente contenido:
+Abre el fichero `.wslconfig` con un editor de texto y añade el siguiente contenido:
 
     ```
     [wsl2]
@@ -51,7 +51,7 @@ Por defecto, WSL2 utiliza una red virtual (NAT) que aisla la máquina Linux de l
     ```
 
 3.  **Reiniciar WSL2**:
-    Para que los cambios surtan efecto, debes reiniciar completamente WSL2. Abre PowerShell o CMD y ejecuta:
+Para que los cambios surtan efecto, debes reiniciar completamente WSL2. Abre PowerShell o CMD y ejecuta:
     ```bash
 wsl --shutdown
 ```
@@ -129,28 +129,28 @@ Aquí tienes los comandos más comunes para gestionar tu stack:
 
 -   **Ver el estado de los servicios:**
     ```bash
-docker-compose ps
-```
+    docker-compose ps
+    ```
 
 -   **Ver los logs de todos los servicios en tiempo real:**
     ```bash
-docker-compose logs -f
-```
+    docker-compose logs -f
+    ```
 
 -   **Ver los logs de un servicio específico (ej. `jellyfin`):**
     ```bash
-docker-compose logs -f jellyfin
-```
+    docker-compose logs -f jellyfin
+    ```
 
 -   **Detener y eliminar los contenedores, redes y volúmenes:**
     ```bash
-docker-compose down -v
-```
+    docker-compose down -v
+    ```
 
 -   **Reiniciar los servicios:**
     ```bash
-docker-compose restart
-```
+    docker-compose restart
+    ```
 
 ## Contribuciones
 

@@ -1,3 +1,11 @@
+# Repositorio para la charla de la UBUParty
+
+Este repositorio contiene los archivos necesarios para descargar y configurar un *mediastack* completo utilizando Docker.
+
+Este proyecto sirve como material de apoyo para la charla sobre Docker en el evento tecnológico **UBUParty**. La explicación detallada de los componentes individuales del *mediastack* se abordará en una charla posterior.
+
+---
+
 # Configuración de Entorno Docker con WSL2 en Windows
 
 Esta guía proporciona los pasos necesarios para configurar un entorno de desarrollo con Docker utilizando WSL2 (Subsistema de Windows para Linux) en Windows.
@@ -45,8 +53,8 @@ Por defecto, WSL2 utiliza una red virtual (NAT) que aisla la máquina Linux de l
 3.  **Reiniciar WSL2**:
     Para que los cambios surtan efecto, debes reiniciar completamente WSL2. Abre PowerShell o CMD y ejecuta:
     ```bash
-    wsl --shutdown
-    ```
+wsl --shutdown
+```
     La próxima vez que abras tu terminal de Debian, se iniciará con la nueva configuración de red.
 
 ## 2. Instalación de Docker Engine en Debian (WSL2)
@@ -108,7 +116,7 @@ Abre el fichero `.env` y ajusta la zona horaria (`TZ`) y, si es necesario, los `
 
 **2. Levantar los servicios**
 
-Una vez configurado tu fichero `.env`, puedes levantar todo el stack de servicios con un solo comando.
+Una vez tengas configurado tu fichero `.env`, puedes levantar todo el stack de servicios con un solo comando.
 
 ```bash
 docker-compose up -d
@@ -121,28 +129,28 @@ Aquí tienes los comandos más comunes para gestionar tu stack:
 
 -   **Ver el estado de los servicios:**
     ```bash
-    docker-compose ps
-    ```
+docker-compose ps
+```
 
 -   **Ver los logs de todos los servicios en tiempo real:**
     ```bash
-    docker-compose logs -f
-    ```
+docker-compose logs -f
+```
 
 -   **Ver los logs de un servicio específico (ej. `jellyfin`):**
     ```bash
-    docker-compose logs -f jellyfin
-    ```
+docker-compose logs -f jellyfin
+```
 
 -   **Detener y eliminar los contenedores, redes y volúmenes:**
     ```bash
-    docker-compose down -v
-    ```
+docker-compose down -v
+```
 
 -   **Reiniciar los servicios:**
     ```bash
-    docker-compose restart
-    ```
+docker-compose restart
+```
 
 ## Contribuciones
 
